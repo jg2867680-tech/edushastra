@@ -1,134 +1,143 @@
-import React from 'react';
-import { Shield, CheckCircle, ArrowRight, Star, Users, Award } from 'lucide-react';
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduShastra | Ability-Based Learning 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gold-gradient { background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); }
+        .navy-deep { background-color: #001f3f; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900">
 
-const LandingPage = () => {
-  return (
-    <div className="min-h-screen bg-slate-50 font-sans text-slate-900">
-      {/* 1. TOP TRUST BAR */}
-      <div className="bg-[#001f3f] text-white py-2 px-4 text-center text-sm font-medium border-b border-yellow-500/30">
-        <span className="flex items-center justify-center gap-2">
-          <Shield size={16} className="text-yellow-500" />
-          VERIFIED 2026 AUDIT: 98% Success Rate & 1:3 Mentorship Ratio Confirmed
-        </span>
-      </div>
-
-      {/* 2. NAVIGATION */}
-      <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200 px-6 py-4 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-[#001f3f] rounded-lg flex items-center justify-center text-yellow-500 font-bold text-xl">E</div>
-          <span className="text-2xl font-bold tracking-tight text-[#001f3f]">EduShastra</span>
-        </div>
-        <div className="hidden md:flex gap-8 font-semibold text-slate-600">
-          <a href="#" className="hover:text-yellow-600 transition">Courses</a>
-          <a href="#" className="hover:text-yellow-600 transition">Ability Model</a>
-          <a href="#" className="hover:text-yellow-600 transition">Faculty</a>
-          <a href="#" className="hover:text-yellow-600 transition">Audit Reports</a>
-        </div>
-        <button className="bg-gradient-to-r from-yellow-500 to-yellow-600 text-[#001f3f] px-6 py-2.5 rounded-full font-bold shadow-lg shadow-yellow-500/20 hover:scale-105 transition">
-          Start Free Trial
-        </button>
-      </nav>
-
-      {/* 3. HERO SECTION */}
-      <header className="relative py-20 px-6 overflow-hidden bg-[#001f3f]">
-        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div>
-            <div className="inline-flex items-center gap-2 bg-yellow-500/10 text-yellow-500 px-4 py-1 rounded-full text-sm font-bold mb-6 border border-yellow-500/20">
-              <Star size={14} fill="currentColor" />
-              TOP RATED CAT & GMAT PREP 2026
-            </div>
-            <h1 className="text-5xl md:text-6xl font-extrabold text-white leading-tight mb-6">
-              Master Your Future with the <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-yellow-200">Ability-Based Model.</span>
-            </h1>
-            <p className="text-slate-300 text-lg mb-8 max-w-lg">
-              Stop following rigid schedules. Learn at your pace with a 1:3 student-mentor ratio and faculty who have actually cleared the exams.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-yellow-500 text-[#001f3f] px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 hover:bg-yellow-400 transition">
-                Calculate Your Potential <ArrowRight size={20} />
-              </button>
-              <button className="bg-white/10 backdrop-blur-sm text-white border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/20 transition">
-                View Faculty Audit
-              </button>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="bg-gradient-to-tr from-yellow-500/20 to-transparent absolute inset-0 rounded-3xl -rotate-3"></div>
-            <div className="bg-slate-800 rounded-3xl aspect-video shadow-2xl border border-white/10 flex items-center justify-center relative overflow-hidden">
-               {/* Video Placeholder */}
-               <img src="/api/placeholder/600/400" alt="Mentorship Session" className="object-cover w-full h-full opacity-60" />
-               <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center pl-1 shadow-xl">
-                    <div className="w-0 h-0 border-t-[10px] border-t-transparent border-l-[18px] border-l-[#001f3f] border-b-[10px] border-b-transparent"></div>
-                  </div>
-               </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* 4. THE POWER BAR (STILL STATS) */}
-      <section className="bg-white border-b border-slate-200 py-8">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div>
-            <div className="text-3xl font-bold text-[#001f3f]">99.99%ile</div>
-            <div className="text-slate-500 text-sm font-medium uppercase tracking-wider">Expert Faculty</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-[#001f3f]">1 : 3</div>
-            <div className="text-slate-500 text-sm font-medium uppercase tracking-wider">Student Ratio</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-[#001f3f]">100%</div>
-            <div className="text-slate-500 text-sm font-medium uppercase tracking-wider">Audit Transparency</div>
-          </div>
-          <div>
-            <div className="text-3xl font-bold text-[#001f3f]">Money-Back</div>
-            <div className="text-slate-500 text-sm font-medium uppercase tracking-wider">Guarantee</div>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. ABILITY VS TRADITIONAL (The Competitor Killer) */}
-      <section className="py-24 px-6 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-[#001f3f] mb-4">Why We Outperform the Giants</h2>
-          <p className="text-slate-500 max-w-2xl mx-auto italic">"Mass education is for numbers. Ability-based education is for results."</p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-8">
-          {/* EduShastra Card */}
-          <div className="bg-gradient-to-b from-[#001f3f] to-[#052d57] p-8 rounded-3xl text-white shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 p-4 bg-yellow-500 text-[#001f3f] font-black rounded-bl-2xl uppercase text-xs tracking-tighter">Recommended</div>
-            <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-              <CheckCircle className="text-yellow-500" /> EduShastra Ability Model
-            </h3>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg border border-white/10">
-                <Users size={18} className="text-yellow-500" /> Personalized 1:3 Mentorship
-              </li>
-              <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg border border-white/10">
-                <Award size={18} className="text-yellow-500" /> Skill-Based Progress (No Fixed Deadlines)
-              </li>
-              <li className="flex items-center gap-3 bg-white/5 p-3 rounded-lg border border-white/10">
-                <Shield size={18} className="text-yellow-500" /> Verified Faculty ROI
-              </li>
-            </ul>
-          </div>
-
-          {/* Competitor Card */}
-          <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm opacity-60 hover:opacity-100 transition">
-            <h3 className="text-2xl font-bold mb-6 text-slate-400">Traditional "Big" Coaching</h3>
-            <ul className="space-y-4">
-              <li className="flex items-center gap-3 text-slate-400 line-through">Massive 1:100+ Batches</li>
-              <li className="flex items-center gap-3 text-slate-400 line-through">Rigid Time-Bound Schedule</li>
-              <li className="flex items-center gap-3 text-slate-400 line-through">Junior/Contract Faculty</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+    <div class="navy-deep text-white py-2 px-4 text-center text-xs md:text-sm font-bold border-b border-yellow-600/30">
+        🛡️ VERIFIED 2026 AUDIT: 98% Success Rate | 1:3 Mentorship Ratio | <span class="text-yellow-400 underline cursor-pointer">View Full Audit Report</span>
     </div>
-  );
-};
 
-export default LandingPage;
+    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 px-6 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 navy-deep rounded-lg flex items-center justify-center text-yellow-500 font-bold text-xl shadow-lg">E</div>
+            <span class="text-2xl font-extrabold tracking-tighter navy-deep text-transparent bg-clip-text bg-gradient-to-r from-[#001f3f] to-[#0a3d70]">EduShastra</span>
+        </div>
+        <div class="hidden md:flex gap-8 font-semibold text-slate-600">
+            <a href="#" class="hover:text-yellow-600 transition">Courses</a>
+            <a href="#" class="hover:text-yellow-600 transition">Ability Model</a>
+            <a href="#" class="hover:text-yellow-600 transition">Faculty</a>
+            <a href="#" class="hover:text-yellow-600 transition">Success Stories</a>
+        </div>
+        <div class="flex gap-4 items-center">
+            <button class="hidden sm:block font-bold text-[#001f3f]">Login</button>
+            <button class="bg-[#001f3f] text-yellow-500 border border-yellow-600/50 px-6 py-2 rounded-full font-bold hover:bg-yellow-500 hover:text-[#001f3f] transition-all shadow-md">
+                Start Free trial
+            </button>
+        </div>
+    </nav>
+
+    <header class="relative py-16 md:py-24 px-6 overflow-hidden navy-deep text-white">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-yellow-500/10 rounded-full blur-[120px]"></div>
+        
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+                <div class="inline-flex items-center gap-2 bg-yellow-500/10 text-yellow-500 px-4 py-1 rounded-full text-xs font-black mb-6 border border-yellow-500/20 tracking-widest uppercase">
+                    ⭐ Premium Adaptive Coaching
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+                    Master Your Percentile via <span class="text-transparent bg-clip-text gold-gradient">Ability-Based</span> Learning.
+                </h1>
+                <p class="text-slate-300 text-lg mb-8 max-w-lg leading-relaxed">
+                    Why follow a rigid 6-month batch? At EduShastra, we map your IQ and adjust the curriculum in real-time. 1:3 ratio. 100% Transparency.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button class="gold-gradient text-[#001f3f] px-8 py-4 rounded-xl font-black text-lg shadow-xl hover:scale-105 transition-transform flex items-center justify-center gap-2">
+                        Calculate My Potential <span>→</span>
+                    </button>
+                    <button class="glass border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">
+                        Watch Demo Session
+                    </button>
+                </div>
+                <div class="mt-12 opacity-50 flex gap-6 grayscale items-center text-xs font-bold uppercase tracking-widest">
+                    <span>Featured in:</span>
+                    <span>NDTV</span>
+                    <span>TOI</span>
+                    <span>Business Standard</span>
+                </div>
+            </div>
+
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-yellow-600 to-[#001f3f] rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div class="relative bg-slate-900 rounded-3xl aspect-video overflow-hidden border border-white/10 shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Mentorship" class="object-cover w-full h-full opacity-60">
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="w-20 h-20 bg-yellow-500/90 rounded-full flex items-center justify-center pl-1 shadow-2xl cursor-pointer hover:scale-110 transition">
+                            <div class="w-0 h-0 border-t-[12px] border-t-transparent border-l-[22px] border-l-[#001f3f] border-b-[12px] border-b-transparent"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-5xl font-black navy-deep mb-4 italic">Education is not a factory.</h2>
+            <p class="text-slate-500 font-medium">How we beat Rodha, PW, and Career Launcher on quality:</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-gradient-to-br from-[#001f3f] to-[#072d54] p-10 rounded-[2.5rem] text-white shadow-2xl relative">
+                <div class="absolute top-6 right-6 px-4 py-1 bg-yellow-500 text-[#001f3f] rounded-full text-xs font-black uppercase">The Winner</div>
+                <h3 class="text-3xl font-bold mb-8 flex items-center gap-3">
+                    <span class="text-yellow-500">✔</span> EduShastra Model
+                </h3>
+                <ul class="space-y-6">
+                    <li class="flex items-start gap-4">
+                        <span class="bg-yellow-500/20 p-1 rounded text-yellow-500 font-bold">01</span>
+                        <div>
+                            <p class="font-bold text-lg">1:3 Student Ratio</p>
+                            <p class="text-slate-400 text-sm">Personalized focus, not a crowd of 200.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="bg-yellow-500/20 p-1 rounded text-yellow-500 font-bold">02</span>
+                        <div>
+                            <p class="font-bold text-lg">Ability-Based Progress</p>
+                            <p class="text-slate-400 text-sm">Finish 1 year course in 4 months or 14 months based on mastery.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-4">
+                        <span class="bg-yellow-500/20 p-1 rounded text-yellow-500 font-bold">03</span>
+                        <div>
+                            <p class="font-bold text-lg">Audit-Verified Faculty</p>
+                            <p class="text-slate-400 text-sm">Check our 2026 Public Audit for score verifications.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-sm flex flex-col justify-center">
+                <h3 class="text-2xl font-bold text-slate-400 mb-8 uppercase tracking-widest">Traditional Coaching</h3>
+                <ul class="space-y-6 opacity-40">
+                    <li class="flex items-center gap-4 text-slate-500">
+                        <span class="font-bold italic">✕</span> Massive Batch Sizes (1:50+)
+                    </li>
+                    <li class="flex items-center gap-4 text-slate-500">
+                        <span class="font-bold italic">✕</span> Rigid, Time-Bound Schedule
+                    </li>
+                    <li class="flex items-center gap-4 text-slate-500">
+                        <span class="font-bold italic">✕</span> Unverified "Topper" Photos
+                    </li>
+                </ul>
+                <div class="mt-10 p-4 bg-slate-50 rounded-2xl border border-dashed border-slate-300 text-center text-slate-500 text-sm italic">
+                    "Mass-market players focus on quantity. We focus on your ROI."
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
