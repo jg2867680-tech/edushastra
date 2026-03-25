@@ -1,143 +1,1535 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EduShastra | Ability-Based Learning 2026</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-        .gold-gradient { background: linear-gradient(135deg, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C); }
-        .navy-deep { background-color: #001f3f; }
-        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); }
-    </style>
-</head>
-<body class="bg-slate-50 text-slate-900">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduShastra — Education for All | GMAT · CAT · GMCAT Coaching</title>
+<meta name="description" content="India's most affordable premium test prep. GMAT 700+ or Refund. CAT 95%ile or Refund. Ability-Based Model. Small Batches. IIT/IIM Faculty.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0a0a0f;
+    --ink-60: rgba(10,10,15,0.6);
+    --ink-20: rgba(10,10,15,0.12);
+    --cream: #faf8f3;
+    --gold: #c9a84c;
+    --gold-light: #f0d98a;
+    --gold-dark: #8a6a1f;
+    --saffron: #e8640a;
+    --forest: #1a3a2a;
+    --sky: #e8f4f8;
+    --red-guarantee: #c0392b;
+    --white: #ffffff;
+    --radius: 2px;
+  }
 
-    <div class="navy-deep text-white py-2 px-4 text-center text-xs md:text-sm font-bold border-b border-yellow-600/30">
-        🛡️ VERIFIED 2026 AUDIT: 98% Success Rate | 1:3 Mentorship Ratio | <span class="text-yellow-400 underline cursor-pointer">View Full Audit Report</span>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--ink);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ─── NAV ─────────────────────────────────────────── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 0 5vw;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(250,248,243,0.88);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--ink-20);
+  }
+
+  .logo {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+    text-decoration: none;
+  }
+  .logo-edu {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.6rem;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .logo-shastra {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: var(--gold-dark);
+    letter-spacing: -0.02em;
+  }
+  .logo-dot {
+    width: 6px; height: 6px;
+    background: var(--saffron);
+    border-radius: 50%;
+    margin: 0 1px 6px;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    align-items: center;
+  }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-60);
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+
+  .nav-cta {
+    background: var(--ink) !important;
+    color: var(--cream) !important;
+    padding: 0.55rem 1.2rem;
+    border-radius: 1px;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--gold-dark) !important; }
+
+  /* ─── HERO ────────────────────────────────────────── */
+  .hero {
+    min-height: 100vh;
+    padding: 120px 5vw 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -100px; right: -100px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 1.5rem;
+    padding: 0.35rem 0.8rem;
+    border: 1px solid rgba(232,100,10,0.3);
+    border-radius: 1px;
+    width: fit-content;
+  }
+  .eyebrow-dot {
+    width: 5px; height: 5px;
+    background: var(--saffron);
+    border-radius: 50%;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.7); }
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.8rem, 5.5vw, 5rem);
+    font-weight: 300;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    color: var(--gold-dark);
+  }
+
+  .hero-subtitle {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--ink-60);
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: all 0.25s;
+    border: 1px solid var(--ink);
+  }
+  .btn-primary:hover {
+    background: var(--gold-dark);
+    border-color: var(--gold-dark);
+  }
+  .btn-primary svg { transition: transform 0.25s; }
+  .btn-primary:hover svg { transform: translateX(4px); }
+
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--ink);
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid var(--ink-20);
+    transition: all 0.25s;
+  }
+  .btn-ghost:hover { border-color: var(--ink); }
+
+  /* Hero Right — Stats card */
+  .hero-visual {
+    position: relative;
+  }
+
+  .guarantee-card {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 2.5rem;
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+  .guarantee-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--saffron), var(--gold), var(--saffron));
+  }
+
+  .guarantee-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .guarantee-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(201,168,76,0.3);
+  }
+
+  .guarantee-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .guarantee-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .g-score {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    min-width: 80px;
+  }
+  .g-desc {
+    padding-top: 0.25rem;
+  }
+  .g-exam {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(250,248,243,0.5);
+    margin-bottom: 0.15rem;
+  }
+  .g-promise {
+    font-size: 0.9rem;
+    color: var(--cream);
+    font-weight: 400;
+  }
+  .g-or-refund {
+    color: var(--saffron);
+    font-style: italic;
+    font-weight: 300;
+  }
+
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border-top: 1px solid rgba(250,248,243,0.1);
+    padding-top: 1.5rem;
+  }
+  .stat-item {
+    text-align: center;
+    padding: 0 0.5rem;
+    border-right: 1px solid rgba(250,248,243,0.1);
+  }
+  .stat-item:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    display: block;
+  }
+  .stat-lbl {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(250,248,243,0.45);
+  }
+
+  /* floating badge */
+  .float-badge {
+    position: absolute;
+    top: -18px;
+    right: 2rem;
+    background: var(--saffron);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 1px;
+    box-shadow: 0 4px 20px rgba(232,100,10,0.4);
+  }
+
+  /* ─── PHILOSOPHY STRIP ────────────────────────────── */
+  .philosophy-strip {
+    background: var(--forest);
+    color: var(--cream);
+    padding: 1.5rem 5vw;
+    overflow: hidden;
+    position: relative;
+  }
+  .marquee-track {
+    display: flex;
+    gap: 4rem;
+    animation: marquee 30s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+  .marquee-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 500;
+    opacity: 0.7;
+  }
+  .marquee-item span { color: var(--gold); font-size: 1rem; }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ─── COURSES ─────────────────────────────────────── */
+  section { padding: 100px 5vw; }
+
+  .section-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 4rem;
+    align-items: end;
+  }
+
+  .section-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 0.8rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 3.5vw, 3.2rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+  .section-title em { font-style: italic; color: var(--gold-dark); }
+
+  .section-desc {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--ink-60);
+    font-weight: 300;
+    align-self: end;
+  }
+
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--ink-20);
+    border: 1.5px solid var(--ink-20);
+  }
+
+  .course-card {
+    background: var(--cream);
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.3s;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  .course-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    height: 2px;
+    width: 0;
+    background: var(--gold);
+    transition: width 0.4s;
+  }
+  .course-card:hover { background: var(--white); }
+  .course-card:hover::after { width: 100%; }
+
+  .course-tag {
+    display: inline-block;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid var(--ink-20);
+    margin-bottom: 1.2rem;
+    color: var(--ink-60);
+  }
+  .course-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+  }
+  .course-full {
+    font-size: 0.8rem;
+    color: var(--ink-60);
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+  }
+  .course-guarantee {
+    background: rgba(192,57,43,0.06);
+    border-left: 2px solid var(--red-guarantee);
+    padding: 0.6rem 0.8rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--red-guarantee);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.02em;
+  }
+  .course-features {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .course-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.82rem;
+    color: var(--ink-60);
+    font-weight: 300;
+  }
+  .course-features li::before {
+    content: '';
+    width: 4px; height: 4px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .course-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 1.8rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    transition: gap 0.2s;
+  }
+  .course-link:hover { gap: 0.9rem; color: var(--gold-dark); }
+
+  /* ─── DIFFERENTIATORS ─────────────────────────────── */
+  .diff-section { background: var(--ink); color: var(--cream); }
+
+  .diff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 4rem;
+  }
+
+  .diff-card {
+    padding: 2.5rem;
+    border-right: 1px solid rgba(250,248,243,0.08);
+    border-bottom: 1px solid rgba(250,248,243,0.08);
+    position: relative;
+  }
+  .diff-card:nth-child(3n) { border-right: none; }
+  .diff-card:nth-last-child(-n+3) { border-bottom: none; }
+
+  .diff-number {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: rgba(201,168,76,0.15);
+    line-height: 1;
+    position: absolute;
+    top: 1.5rem; right: 1.5rem;
+  }
+  .diff-icon {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .diff-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+    letter-spacing: -0.01em;
+  }
+  .diff-body {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    color: rgba(250,248,243,0.55);
+    font-weight: 300;
+  }
+
+  /* ─── FACULTY ─────────────────────────────────────── */
+  .faculty-scroll {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .faculty-card {
+    border: 1px solid var(--ink-20);
+    padding: 2rem;
+    transition: all 0.3s;
+    position: relative;
+  }
+  .faculty-card:hover {
+    border-color: var(--gold);
+    box-shadow: 0 8px 32px rgba(201,168,76,0.12);
+  }
+
+  .faculty-avatar {
+    width: 64px; height: 64px;
+    background: var(--ink);
+    border-radius: 50%;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--gold);
+  }
+
+  .faculty-belief {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--ink-60);
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+  }
+  .faculty-exp {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 0.3rem;
+  }
+  .faculty-score {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold-dark);
+    letter-spacing: 0.05em;
+  }
+
+  /* ─── PROCESS ─────────────────────────────────────── */
+  .process-section { background: #f5f2eb; }
+
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    margin-top: 4rem;
+    position: relative;
+  }
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 1.8rem;
+    left: calc(12.5% + 1rem);
+    right: calc(12.5% + 1rem);
+    height: 1px;
+    background: var(--ink-20);
+  }
+
+  .process-step {
+    padding: 0 1.5rem;
+    text-align: center;
+  }
+  .step-num {
+    width: 3.5rem; height: 3.5rem;
+    background: var(--ink);
+    color: var(--cream);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    margin: 0 auto 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+  .step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .step-desc {
+    font-size: 0.82rem;
+    color: var(--ink-60);
+    line-height: 1.65;
+    font-weight: 300;
+  }
+
+  /* ─── MISSION ─────────────────────────────────────── */
+  .mission-section {
+    background: var(--cream);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    padding: 120px 5vw;
+  }
+
+  .mission-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    border-left: 3px solid var(--gold);
+    padding-left: 2rem;
+  }
+  .mission-quote em { font-style: italic; color: var(--gold-dark); }
+
+  .mission-right {}
+
+  .mission-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .mission-block {
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--ink-20);
+  }
+  .mission-block:last-child { border-bottom: none; padding-bottom: 0; }
+  .mission-block-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin-bottom: 0.5rem;
+  }
+  .mission-block-text {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: var(--ink-60);
+    font-weight: 300;
+  }
+
+  /* ─── SERVICES FREE ───────────────────────────────── */
+  .free-section { background: var(--forest); color: var(--cream); }
+  .free-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: rgba(250,248,243,0.08);
+    margin-top: 3.5rem;
+  }
+  .free-item {
+    background: var(--forest);
+    padding: 2rem;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    transition: background 0.2s;
+  }
+  .free-item:hover { background: rgba(255,255,255,0.04); }
+  .free-check {
+    width: 20px; height: 20px;
+    background: var(--gold);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 2px;
+    font-size: 0.6rem;
+    color: var(--ink);
+    font-weight: 700;
+  }
+  .free-text {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: rgba(250,248,243,0.75);
+  }
+  .free-text strong {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--cream);
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+  }
+
+  /* ─── CONTACT ─────────────────────────────────────── */
+  .contact-section {
+    background: var(--cream);
+    padding: 100px 5vw;
+  }
+  .contact-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
+  }
+  .contact-info {}
+  .contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+  }
+  .contact-item {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--ink-20);
+  }
+  .contact-item:last-child { border-bottom: none; }
+  .ci-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink-60);
+    min-width: 80px;
+    padding-top: 2px;
+  }
+  .ci-value {
+    font-size: 0.88rem;
+    color: var(--ink);
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  .ci-value a { color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--ink-20); }
+  .ci-value a:hover { border-color: var(--gold); color: var(--gold-dark); }
+
+  .contact-form {
+    background: var(--white);
+    border: 1px solid var(--ink-20);
+    padding: 2.5rem;
+  }
+  .form-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  .form-field {
+    margin-bottom: 1rem;
+  }
+  .form-field label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-60);
+    margin-bottom: 0.4rem;
+  }
+  .form-field input,
+  .form-field select,
+  .form-field textarea {
+    width: 100%;
+    border: 1px solid var(--ink-20);
+    background: var(--cream);
+    padding: 0.8rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.2s;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+  .form-field input:focus,
+  .form-field select:focus,
+  .form-field textarea:focus {
+    border-color: var(--gold);
+  }
+
+  /* ─── FOOTER ──────────────────────────────────────── */
+  footer {
+    background: var(--ink);
+    color: rgba(250,248,243,0.5);
+    padding: 4rem 5vw 2rem;
+  }
+  .footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(250,248,243,0.08);
+  }
+  .footer-brand .logo-edu { color: var(--cream); font-size: 1.4rem; }
+  .footer-brand .logo-shastra { font-size: 1.4rem; }
+  .footer-tagline {
+    font-size: 0.82rem;
+    line-height: 1.7;
+    margin-top: 1rem;
+    opacity: 0.6;
+    font-weight: 300;
+  }
+  .footer-col-title {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(250,248,243,0.4);
+    margin-bottom: 1.2rem;
+  }
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .footer-links a {
+    text-decoration: none;
+    color: rgba(250,248,243,0.55);
+    font-size: 0.85rem;
+    font-weight: 300;
+    transition: color 0.2s;
+  }
+  .footer-links a:hover { color: var(--gold); }
+  .footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.75rem;
+  }
+  .footer-philosophy {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+
+  /* ─── ANIMATIONS ──────────────────────────────────── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ─── RESPONSIVE ──────────────────────────────────── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; min-height: auto; padding: 100px 5vw 60px; }
+    .hero-visual { display: none; }
+    .section-header { grid-template-columns: 1fr; }
+    .courses-grid { grid-template-columns: 1fr; gap: 0; }
+    .diff-grid { grid-template-columns: 1fr; }
+    .diff-card { border-right: none; }
+    .faculty-scroll { grid-template-columns: 1fr 1fr; }
+    .process-steps { grid-template-columns: 1fr 1fr; }
+    .process-steps::before { display: none; }
+    .mission-section { grid-template-columns: 1fr; gap: 3rem; padding: 60px 5vw; }
+    .free-grid { grid-template-columns: 1fr; }
+    .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .footer-top { grid-template-columns: 1fr 1fr; }
+    nav .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══════════════════════════════════════════ -->
+<nav>
+  <a href="/" class="logo">
+    <span class="logo-edu">Edu</span>
+    <div class="logo-dot"></div>
+    <span class="logo-shastra">Shastra</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#courses">Courses</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#faculty">Faculty</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#contact" class="nav-cta">Apply Now</a></li>
+  </ul>
+</nav>
+
+<!-- ═══ HERO ═══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      Philanthropy · Not for Profit · Since 2016
+    </div>
+    <h1 class="hero-title">
+      World-class prep<br>
+      at a price that<br>
+      <em>every student</em><br>
+      can afford.
+    </h1>
+    <p class="hero-subtitle">
+      India's only ability-based, small-batch MBA test prep — with a money-back guarantee. GMAT · CAT · GMCAT. IIT/IIM faculty. Zero marketing. Pure product.
+    </p>
+    <div class="hero-actions">
+      <a href="#courses" class="btn-primary">
+        Explore Courses
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <a href="tel:01147082205" class="btn-ghost">
+        📞 Call Us Free
+      </a>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="float-badge">🏆 Apex-25 Batch Open</div>
+    <div class="guarantee-card">
+      <div class="guarantee-label">Our Score Guarantee</div>
+      <div class="guarantee-items">
+        <div class="guarantee-item">
+          <div class="g-score">700+</div>
+          <div class="g-desc">
+            <div class="g-exam">GMAT Focus</div>
+            <div class="g-promise">Score 700+ <span class="g-or-refund">or full refund</span></div>
+          </div>
+        </div>
+        <div class="guarantee-item">
+          <div class="g-score">95%</div>
+          <div class="g-desc">
+            <div class="g-exam">CAT / GMCAT</div>
+            <div class="g-promise">95th percentile+ <span class="g-or-refund">or full refund</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="stats-row">
+        <div class="stat-item">
+          <span class="stat-num">16+</span>
+          <span class="stat-lbl">Yrs Exp</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">25</span>
+          <span class="stat-lbl">Max Batch</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">790</span>
+          <span class="stat-lbl">Top GMAT</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MARQUEE STRIP ══════════════════════════════════ -->
+<div class="philosophy-strip">
+  <div class="marquee-track">
+    <div class="marquee-item"><span>◆</span> Education for All</div>
+    <div class="marquee-item"><span>◆</span> For People, Not for Profits</div>
+    <div class="marquee-item"><span>◆</span> GMAT 700+ or Refund</div>
+    <div class="marquee-item"><span>◆</span> CAT 95%ile or Refund</div>
+    <div class="marquee-item"><span>◆</span> IIT / IIM Faculty</div>
+    <div class="marquee-item"><span>◆</span> Ability-Based Learning</div>
+    <div class="marquee-item"><span>◆</span> Lifetime Course Validity</div>
+    <div class="marquee-item"><span>◆</span> Zero Marketing · Pure Product</div>
+    <!-- duplicate for seamless loop -->
+    <div class="marquee-item"><span>◆</span> Education for All</div>
+    <div class="marquee-item"><span>◆</span> For People, Not for Profits</div>
+    <div class="marquee-item"><span>◆</span> GMAT 700+ or Refund</div>
+    <div class="marquee-item"><span>◆</span> CAT 95%ile or Refund</div>
+    <div class="marquee-item"><span>◆</span> IIT / IIM Faculty</div>
+    <div class="marquee-item"><span>◆</span> Ability-Based Learning</div>
+    <div class="marquee-item"><span>◆</span> Lifetime Course Validity</div>
+    <div class="marquee-item"><span>◆</span> Zero Marketing · Pure Product</div>
+  </div>
+</div>
+
+<!-- ═══ COURSES ════════════════════════════════════════ -->
+<section id="courses">
+  <div class="section-header fade-in">
+    <div>
+      <div class="section-eyebrow">Programs</div>
+      <h2 class="section-title">
+        Choose your<br><em>path to the top.</em>
+      </h2>
+    </div>
+    <p class="section-desc">
+      Every course uses our proprietary Ability-Based Model — you progress at your own pace until you hit your target. No time limits. Courses repeat until you succeed.
+    </p>
+  </div>
+
+  <div class="courses-grid fade-in">
+    <!-- GMAT -->
+    <div class="course-card">
+      <span class="course-tag">Flagship</span>
+      <div class="course-name">GMAT</div>
+      <div class="course-full">GMAT Focus Edition</div>
+      <div class="course-guarantee">🛡 GMAT 700+ or Full Refund</div>
+      <ul class="course-features">
+        <li>Apex-25: Batch of max 25 students</li>
+        <li>AI-Based Smart Live Classes</li>
+        <li>IQ-Based Mapping & Batch Allocation</li>
+        <li>Unlimited Computer-Adaptive Tests</li>
+        <li>Free MBA Admission Counselling</li>
+        <li>Lifetime Course Validity</li>
+        <li>Free GMAT Official Guide included</li>
+      </ul>
+      <a href="#contact" class="course-link">
+        Apply for GMAT
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
     </div>
 
-    <nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-slate-200 px-6 py-4 flex justify-between items-center">
-        <div class="flex items-center gap-3">
-            <div class="w-10 h-10 navy-deep rounded-lg flex items-center justify-center text-yellow-500 font-bold text-xl shadow-lg">E</div>
-            <span class="text-2xl font-extrabold tracking-tighter navy-deep text-transparent bg-clip-text bg-gradient-to-r from-[#001f3f] to-[#0a3d70]">EduShastra</span>
-        </div>
-        <div class="hidden md:flex gap-8 font-semibold text-slate-600">
-            <a href="#" class="hover:text-yellow-600 transition">Courses</a>
-            <a href="#" class="hover:text-yellow-600 transition">Ability Model</a>
-            <a href="#" class="hover:text-yellow-600 transition">Faculty</a>
-            <a href="#" class="hover:text-yellow-600 transition">Success Stories</a>
-        </div>
-        <div class="flex gap-4 items-center">
-            <button class="hidden sm:block font-bold text-[#001f3f]">Login</button>
-            <button class="bg-[#001f3f] text-yellow-500 border border-yellow-600/50 px-6 py-2 rounded-full font-bold hover:bg-yellow-500 hover:text-[#001f3f] transition-all shadow-md">
-                Start Free trial
-            </button>
-        </div>
-    </nav>
+    <!-- CAT -->
+    <div class="course-card">
+      <span class="course-tag">Most Popular</span>
+      <div class="course-name">CAT</div>
+      <div class="course-full">Common Admission Test</div>
+      <div class="course-guarantee">🛡 CAT 95%ile+ or Full Refund</div>
+      <ul class="course-features">
+        <li>Min. 160 Hours of Live Classes</li>
+        <li>21+ EliteCAT Mock Tests</li>
+        <li>Soft Skills & GD/PI Preparation</li>
+        <li>SNAP, XAT, IIFT, NMAT Free Course</li>
+        <li>Weekday & Weekend Batches</li>
+        <li>Comprehensive Study Material</li>
+        <li>Free MBA Admission Counselling</li>
+      </ul>
+      <a href="#contact" class="course-link">
+        Apply for CAT
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
 
-    <header class="relative py-16 md:py-24 px-6 overflow-hidden navy-deep text-white">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-yellow-500/10 rounded-full blur-[120px]"></div>
-        
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-            <div>
-                <div class="inline-flex items-center gap-2 bg-yellow-500/10 text-yellow-500 px-4 py-1 rounded-full text-xs font-black mb-6 border border-yellow-500/20 tracking-widest uppercase">
-                    ⭐ Premium Adaptive Coaching
-                </div>
-                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
-                    Master Your Percentile via <span class="text-transparent bg-clip-text gold-gradient">Ability-Based</span> Learning.
-                </h1>
-                <p class="text-slate-300 text-lg mb-8 max-w-lg leading-relaxed">
-                    Why follow a rigid 6-month batch? At EduShastra, we map your IQ and adjust the curriculum in real-time. 1:3 ratio. 100% Transparency.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <button class="gold-gradient text-[#001f3f] px-8 py-4 rounded-xl font-black text-lg shadow-xl hover:scale-105 transition-transform flex items-center justify-center gap-2">
-                        Calculate My Potential <span>→</span>
-                    </button>
-                    <button class="glass border border-white/20 px-8 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition">
-                        Watch Demo Session
-                    </button>
-                </div>
-                <div class="mt-12 opacity-50 flex gap-6 grayscale items-center text-xs font-bold uppercase tracking-widest">
-                    <span>Featured in:</span>
-                    <span>NDTV</span>
-                    <span>TOI</span>
-                    <span>Business Standard</span>
-                </div>
-            </div>
+    <!-- GMCAT -->
+    <div class="course-card">
+      <span class="course-tag">Best Value</span>
+      <div class="course-name">GMCAT</div>
+      <div class="course-full">GMAT + CAT Combined</div>
+      <div class="course-guarantee">🛡 Dual Guarantee on Both Exams</div>
+      <ul class="course-features">
+        <li>Complete GMAT + CAT curriculum</li>
+        <li>Free GMAT & CAT add-on services</li>
+        <li>Both exam guarantees included</li>
+        <li>All GMAT services included</li>
+        <li>All CAT services included</li>
+        <li>Single fee, double outcome</li>
+        <li>Alumni network access for life</li>
+      </ul>
+      <a href="#contact" class="course-link">
+        Apply for GMCAT
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
 
-            <div class="relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-yellow-600 to-[#001f3f] rounded-3xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                <div class="relative bg-slate-900 rounded-3xl aspect-video overflow-hidden border border-white/10 shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80" alt="Mentorship" class="object-cover w-full h-full opacity-60">
-                    <div class="absolute inset-0 flex items-center justify-center">
-                        <div class="w-20 h-20 bg-yellow-500/90 rounded-full flex items-center justify-center pl-1 shadow-2xl cursor-pointer hover:scale-110 transition">
-                            <div class="w-0 h-0 border-t-[12px] border-t-transparent border-l-[22px] border-l-[#001f3f] border-b-[12px] border-b-transparent"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- ═══ WHY EDUSHASTRA ════════════════════════════════ -->
+<section id="why" class="diff-section">
+  <div class="section-header fade-in" style="color:var(--cream);">
+    <div>
+      <div class="section-eyebrow">Differentiation</div>
+      <h2 class="section-title">
+        Why students<br><em>choose differently.</em>
+      </h2>
+    </div>
+    <p class="section-desc" style="color:rgba(250,248,243,0.5);">
+      Most coaching centres maximise batch size to maximise profit. We do the opposite — and guarantee your result.
+    </p>
+  </div>
+
+  <div class="diff-grid fade-in">
+    <div class="diff-card">
+      <div class="diff-number">01</div>
+      <div class="diff-icon">🧠</div>
+      <div class="diff-title">Ability-Based Model</div>
+      <div class="diff-body">Your course closes when YOU reach your target — not when the calendar says so. Every student progresses at their own optimal pace. Courses repeat at zero extra cost until you succeed.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-number">02</div>
+      <div class="diff-icon">🔬</div>
+      <div class="diff-title">IQ Mapping & Percentile Batches</div>
+      <div class="diff-body">Every new student takes an Entrance Mapping Test — an IQ-based aptitude test. Students are grouped into homogeneous percentile bands so each batch gets exactly the right curriculum, pace, and depth.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-number">03</div>
+      <div class="diff-icon">👥</div>
+      <div class="diff-title">Max 25 Students Per Batch</div>
+      <div class="diff-body">Apex-25 batches are capped at 25 students selected on merit. No herd teaching. Your teacher knows your name, your weaknesses, and your goals. Elite batches cap at 90. Industry average: 200+.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-number">04</div>
+      <div class="diff-icon">🛡</div>
+      <div class="diff-title">Score Guarantee or Full Refund</div>
+      <div class="diff-body">We put our money where our teaching is. GMAT 700+ or refund. CAT 95th percentile or refund. No fine print, no conditions on what "refund" means. If you fail, you get your money back.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-number">05</div>
+      <div class="diff-icon">♾</div>
+      <div class="diff-title">Lifetime Course Validity</div>
+      <div class="diff-body">Your enrolment never expires. Repeat the course as many times as needed without paying again. We're invested in your success for the long run, not just till your first attempt.</div>
+    </div>
+    <div class="diff-card">
+      <div class="diff-number">06</div>
+      <div class="diff-icon">💰</div>
+      <div class="diff-title">Truly Affordable Fees</div>
+      <div class="diff-body">Our mission is "Education for All." We have no Sales & Marketing department — zero ad spend. All savings go toward keeping fees low. Quality education is not a privilege of the wealthy.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FACULTY ════════════════════════════════════════ -->
+<section id="faculty">
+  <div class="section-header fade-in">
+    <div>
+      <div class="section-eyebrow">The Teachers</div>
+      <h2 class="section-title">
+        Taught by<br><em>toppers themselves.</em>
+      </h2>
+    </div>
+    <p class="section-desc">
+      Every EduShastra teacher is an IIT/IIM alumnus or senior government official — and a CAT 99%iler or GMAT 745+ scorer. They've cracked the exam. They know the way.
+    </p>
+  </div>
+
+  <div class="faculty-scroll fade-in">
+    <div class="faculty-card">
+      <div class="faculty-avatar">A</div>
+      <div class="faculty-belief">"Nothing Having Worth Comes Easy"</div>
+      <div class="faculty-exp">16+ yrs Teaching Experience</div>
+      <div class="faculty-score">CAT QA 100%ile · GMAT FE 745</div>
+    </div>
+    <div class="faculty-card">
+      <div class="faculty-avatar">B</div>
+      <div class="faculty-belief">"Mathematics: Mother of all Sciences"</div>
+      <div class="faculty-exp">NIT Alumnus · CAT Topper</div>
+      <div class="faculty-score">CAT 2024 99.92%ile · GMAT FE 765</div>
+    </div>
+    <div class="faculty-card">
+      <div class="faculty-avatar">C</div>
+      <div class="faculty-belief">"Everyone is a Genius"</div>
+      <div class="faculty-exp">Rtd. Director, Dept. of Science & Tech, GoI</div>
+      <div class="faculty-score">IIM-A · IIT-K Alumnus</div>
+    </div>
+    <div class="faculty-card">
+      <div class="faculty-avatar">D</div>
+      <div class="faculty-belief">"Affordable Quality Education"</div>
+      <div class="faculty-exp">Rtd. IAS Officer</div>
+      <div class="faculty-score">CAT 100%ile · GMAT 790</div>
+    </div>
+    <div class="faculty-card">
+      <div class="faculty-avatar">E</div>
+      <div class="faculty-belief">"Education for All"</div>
+      <div class="faculty-exp">16+ yrs Leadership in IT & Retail</div>
+      <div class="faculty-score">Ph.D (DU) · CAT 99.99%ile · GMAT 780</div>
+    </div>
+    <div class="faculty-card">
+      <div class="faculty-avatar">F</div>
+      <div class="faculty-belief">"Teaching is love in its purest form"</div>
+      <div class="faculty-exp">15+ yrs Teaching Experience</div>
+      <div class="faculty-score">IIM Alumnus · CAT 100%ile · GMAT V51</div>
+    </div>
+    <div class="faculty-card">
+      <div class="faculty-avatar">G</div>
+      <div class="faculty-belief">"Dream it. Wish it. Do it."</div>
+      <div class="faculty-exp">16+ yrs Teaching · Ex Deputy Director-LPU</div>
+      <div class="faculty-score">Multiple Top Scores</div>
+    </div>
+    <div class="faculty-card">
+      <div class="faculty-avatar">+</div>
+      <div class="faculty-belief" style="font-style:normal;font-size:0.85rem;">And many more expert educators committed to your success at IIMs and top B-schools worldwide.</div>
+      <div class="faculty-exp" style="margin-top:0.8rem;">
+        <a href="#contact" style="color:var(--gold-dark);font-size:0.8rem;font-weight:600;letter-spacing:0.05em;">Meet the Team →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ════════════════════════════════════════ -->
+<section id="process" class="process-section">
+  <div class="section-header fade-in">
+    <div>
+      <div class="section-eyebrow">How it Works</div>
+      <h2 class="section-title">
+        Your journey<br><em>from here to IIM.</em>
+      </h2>
+    </div>
+    <p class="section-desc">
+      A clear, four-step path from application to B-school admission — with our team by your side every step of the way.
+    </p>
+  </div>
+
+  <div class="process-steps fade-in">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-title">Apply & Map</div>
+      <div class="step-desc">Pay ₹2 application fee. Take the IQ-based Entrance Mapping Test to identify your exact starting level across all skill dimensions.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-title">Get Placed</div>
+      <div class="step-desc">Based on your Mapping Test results, you're placed in the right percentile batch. Classes begin in your tailored curriculum.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-title">Learn & Test</div>
+      <div class="step-desc">Attend live interactive AI-powered classes. Take unlimited mock tests. Upgrade batches weekly as you improve. Repeat cycles until you hit target.</div>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-title">Ace & Admit</div>
+      <div class="step-desc">Score 700+ / 95%ile+. Our team then guides your entire B-school application — essays, SOP, LOR, interviews — until you get admitted.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ MISSION ════════════════════════════════════════ -->
+<section class="mission-section">
+  <div class="mission-quote fade-in">
+    "Education benefits both the individual and society and must be preserved as a <em>public good</em> — not a tool for profit."
+    <div style="margin-top:1.5rem;font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-60);">— EduShastra Philosophy</div>
+  </div>
+  <div class="mission-right fade-in">
+    <div class="section-eyebrow" style="margin-bottom:1rem;">Our Mission</div>
+    <div class="mission-blocks">
+      <div class="mission-block">
+        <div class="mission-block-title">Vision</div>
+        <div class="mission-block-text">To provide world-class education at minimal cost. People-Centric, not Profit-Centric. Quality education is an inalienable right of every person — not a privilege for the wealthy.</div>
+      </div>
+      <div class="mission-block">
+        <div class="mission-block-title">Zero Marketing</div>
+        <div class="mission-block-text">EduShastra has no Sales & Marketing department. We spend zero on advertising. Our students are our only marketing strength. Our product is our only strategy.</div>
+      </div>
+      <div class="mission-block">
+        <div class="mission-block-title">Est. 2016 — New Delhi</div>
+        <div class="mission-block-text">Launched online on 22 June 2016. Physical presence at EduShastra Knowledge House, Janakpuri, New Delhi. Serving students across India and overseas.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FREE SERVICES ══════════════════════════════════ -->
+<section class="free-section">
+  <div class="section-header fade-in" style="color:var(--cream);">
+    <div>
+      <div class="section-eyebrow">Included Free</div>
+      <h2 class="section-title" style="color:var(--cream);">
+        Everything you need,<br><em>nothing extra to pay.</em>
+      </h2>
+    </div>
+    <p class="section-desc" style="color:rgba(250,248,243,0.5);">
+      All these end-to-end MBA admission services are included in your course fee — not sold separately like at other coaching centres.
+    </p>
+  </div>
+
+  <div class="free-grid fade-in">
+    <div class="free-item">
+      <div class="free-check">✓</div>
+      <div class="free-text"><strong>Profile Evaluation (IQ & EQ)</strong>Scientific mapping of your strengths to target the right B-schools.</div>
+    </div>
+    <div class="free-item">
+      <div class="free-check">✓</div>
+      <div class="free-text"><strong>B-School Selection & Mapping</strong>Personalised shortlist based on your profile, scores, and aspirations.</div>
+    </div>
+    <div class="free-item">
+      <div class="free-check">✓</div>
+      <div class="free-text"><strong>SOP, LOR & Essay Editing</strong>Expert editing of all your application documents until they're perfect.</div>
+    </div>
+    <div class="free-item">
+      <div class="free-check">✓</div>
+      <div class="free-text"><strong>GD / WAT / PI Preparation</strong>Comprehensive interview and group discussion coaching for final rounds.</div>
+    </div>
+    <div class="free-item">
+      <div class="free-check">✓</div>
+      <div class="free-text"><strong>SNAP, XAT, IIFT, NMAT Course</strong>Free additional exam prep so you have multiple B-school options.</div>
+    </div>
+    <div class="free-item">
+      <div class="free-check">✓</div>
+      <div class="free-text"><strong>Alumni Mentoring & Network</strong>Access to EduShastra alumni at top IIMs and global B-schools for guidance.</div>
+    </div>
+    <div class="free-item">
+      <div class="free-check">✓</div>
+      <div class="free-text"><strong>Scholarship & Loan Counselling</strong>Guidance on educational loans, scholarships, and financial aid options.</div>
+    </div>
+    <div class="free-item">
+      <div class="free-check">✓</div>
+      <div class="free-text"><strong>Soft Skills Development</strong>Communication, confidence, and presentation skills built alongside academics.</div>
+    </div>
+    <div class="free-item">
+      <div class="free-check">✓</div>
+      <div class="free-text"><strong>Unlimited Mock Tests</strong>Computer-adaptive full-length, sectional, and topic-wise tests with analytics.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CONTACT ════════════════════════════════════════ -->
+<section id="contact" class="contact-section">
+  <div class="contact-inner">
+    <div class="contact-info">
+      <div class="section-eyebrow">Get In Touch</div>
+      <h2 class="section-title" style="margin-top:0.8rem;">
+        Start your<br><em>journey today.</em>
+      </h2>
+      <div class="contact-items">
+        <div class="contact-item">
+          <div class="ci-label">Phone</div>
+          <div class="ci-value">
+            <a href="tel:01147082205">011-4708-2205</a><br>
+            <a href="tel:07428724580">074287-24580</a><br>
+            <a href="tel:09625492169">096254-92169</a>
+          </div>
         </div>
-    </header>
-
-    <section class="py-20 px-6 max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-5xl font-black navy-deep mb-4 italic">Education is not a factory.</h2>
-            <p class="text-slate-500 font-medium">How we beat Rodha, PW, and Career Launcher on quality:</p>
+        <div class="contact-item">
+          <div class="ci-label">Email</div>
+          <div class="ci-value">
+            <a href="mailto:contact@edushastra.com">contact@edushastra.com</a><br>
+            <a href="mailto:support@edushastra.com">support@edushastra.com</a>
+          </div>
         </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-gradient-to-br from-[#001f3f] to-[#072d54] p-10 rounded-[2.5rem] text-white shadow-2xl relative">
-                <div class="absolute top-6 right-6 px-4 py-1 bg-yellow-500 text-[#001f3f] rounded-full text-xs font-black uppercase">The Winner</div>
-                <h3 class="text-3xl font-bold mb-8 flex items-center gap-3">
-                    <span class="text-yellow-500">✔</span> EduShastra Model
-                </h3>
-                <ul class="space-y-6">
-                    <li class="flex items-start gap-4">
-                        <span class="bg-yellow-500/20 p-1 rounded text-yellow-500 font-bold">01</span>
-                        <div>
-                            <p class="font-bold text-lg">1:3 Student Ratio</p>
-                            <p class="text-slate-400 text-sm">Personalized focus, not a crowd of 200.</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="bg-yellow-500/20 p-1 rounded text-yellow-500 font-bold">02</span>
-                        <div>
-                            <p class="font-bold text-lg">Ability-Based Progress</p>
-                            <p class="text-slate-400 text-sm">Finish 1 year course in 4 months or 14 months based on mastery.</p>
-                        </div>
-                    </li>
-                    <li class="flex items-start gap-4">
-                        <span class="bg-yellow-500/20 p-1 rounded text-yellow-500 font-bold">03</span>
-                        <div>
-                            <p class="font-bold text-lg">Audit-Verified Faculty</p>
-                            <p class="text-slate-400 text-sm">Check our 2026 Public Audit for score verifications.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="bg-white p-10 rounded-[2.5rem] border border-slate-200 shadow-sm flex flex-col justify-center">
-                <h3 class="text-2xl font-bold text-slate-400 mb-8 uppercase tracking-widest">Traditional Coaching</h3>
-                <ul class="space-y-6 opacity-40">
-                    <li class="flex items-center gap-4 text-slate-500">
-                        <span class="font-bold italic">✕</span> Massive Batch Sizes (1:50+)
-                    </li>
-                    <li class="flex items-center gap-4 text-slate-500">
-                        <span class="font-bold italic">✕</span> Rigid, Time-Bound Schedule
-                    </li>
-                    <li class="flex items-center gap-4 text-slate-500">
-                        <span class="font-bold italic">✕</span> Unverified "Topper" Photos
-                    </li>
-                </ul>
-                <div class="mt-10 p-4 bg-slate-50 rounded-2xl border border-dashed border-slate-300 text-center text-slate-500 text-sm italic">
-                    "Mass-market players focus on quantity. We focus on your ROI."
-                </div>
-            </div>
+        <div class="contact-item">
+          <div class="ci-label">Address</div>
+          <div class="ci-value">
+            EduShastra Knowledge House<br>
+            Office No. 628, 3rd Floor<br>
+            Block B1, Janakpuri<br>
+            New Delhi – 110058
+          </div>
         </div>
-    </section>
+        <div class="contact-item">
+          <div class="ci-label">Courses</div>
+          <div class="ci-value">
+            <a href="mailto:gmat@edushastra.com">gmat@edushastra.com</a><br>
+            <a href="mailto:cat@edushastra.com">cat@edushastra.com</a><br>
+            <a href="mailto:gmcat@edushastra.com">gmcat@edushastra.com</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <div class="contact-form">
+      <div class="form-title">Apply Now</div>
+      <div class="form-row">
+        <div class="form-field">
+          <label>First Name</label>
+          <input type="text" placeholder="Arjun">
+        </div>
+        <div class="form-field">
+          <label>Last Name</label>
+          <input type="text" placeholder="Sharma">
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Email Address</label>
+        <input type="email" placeholder="arjun@example.com">
+      </div>
+      <div class="form-field">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+91 98765 43210">
+      </div>
+      <div class="form-field">
+        <label>Course Interest</label>
+        <select>
+          <option value="">Select a course...</option>
+          <option>GMAT — Apex-25 Batch</option>
+          <option>GMAT — Elite Batch</option>
+          <option>CAT — Apex-25 Batch</option>
+          <option>CAT — Elite Batch</option>
+          <option>GMCAT — Combined GMAT + CAT</option>
+          <option>CUET Preparation</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Message (Optional)</label>
+        <textarea rows="3" placeholder="Tell us about your target score and timeline..."></textarea>
+      </div>
+      <button class="btn-primary" style="width:100%;justify-content:center;border:none;cursor:pointer;" onclick="alert('Thank you! Our team will contact you within 24 hours. Pay ₹2 to apply: contact@edushastra.com')">
+        Submit Application
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <p style="font-size:0.72rem;color:var(--ink-60);margin-top:0.8rem;text-align:center;">
+        Application fee: ₹2 only. Our team responds within 24 hours.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═════════════════════════════════════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo">
+        <span class="logo-edu footer-brand" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:700;color:var(--cream);letter-spacing:-0.02em;">Edu</span>
+        <div class="logo-dot" style="margin-bottom:4px;"></div>
+        <span class="logo-shastra" style="font-family:'Cormorant Garamond',serif;font-size:1.4rem;font-weight:300;color:var(--gold-dark);letter-spacing:-0.02em;">Shastra</span>
+      </div>
+      <p class="footer-tagline">
+        EduShastra Education Solutions Pvt. Ltd.<br>
+        A Subsidiary of EduShastra Group<br><br>
+        "For People, Not for Profits" — Education for All since 2016.
+      </p>
+    </div>
+    <div>
+      <div class="footer-col-title">Courses</div>
+      <ul class="footer-links">
+        <li><a href="#">GMAT Prep</a></li>
+        <li><a href="#">CAT Prep</a></li>
+        <li><a href="#">GMCAT Combined</a></li>
+        <li><a href="#">CUET Prep</a></li>
+        <li><a href="#">Free Trial</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Company</div>
+      <ul class="footer-links">
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Faculty</a></li>
+        <li><a href="#">Our Philosophy</a></li>
+        <li><a href="#">Alumni Stories</a></li>
+        <li><a href="#">Careers</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Support</div>
+      <ul class="footer-links">
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <li><a href="#">Student Login</a></li>
+        <li><a href="#">Refund Policy</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2016–2026 EduShastra Education Solutions Pvt. Ltd. All rights reserved.</span>
+    <span class="footer-philosophy">Education is not a privilege — it is a right.</span>
+  </div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        // stagger children
+        e.target.querySelectorAll('.course-card, .diff-card, .faculty-card, .process-step, .free-item').forEach((child, i) => {
+          child.style.transitionDelay = `${i * 80}ms`;
+          child.classList.add('fade-in', 'visible');
+        });
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
