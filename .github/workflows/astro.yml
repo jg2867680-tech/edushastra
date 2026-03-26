@@ -22,7 +22,7 @@ jobs:
           node-version: 22 # Updated for Astro 6
 
       - name: Install dependencies
-        run: npm install # Standard install without strict cache checks
+        run: npm install --legacy-peer-deps
 
       - name: Build Astro
         run: npm run build
