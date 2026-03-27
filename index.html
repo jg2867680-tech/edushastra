@@ -204,30 +204,32 @@
   <div class="max-w-7xl mx-auto w-full grid lg:grid-cols-2 gap-16 items-center relative z-10">
 
     <!-- Left: Copy -->
-    <div class="space-y-8">
+    <div class="space-y-6">
+
       <!-- Pill badge -->
       <div class="inline-flex items-center gap-2 bg-brand-500/10 border border-brand-500/30 rounded-full px-4 py-1.5 text-brand-400 text-xs font-semibold tracking-widest uppercase">
         <span class="w-1.5 h-1.5 bg-brand-400 rounded-full animate-pulse"></span>
         Admissions Open · Apex-25 Batch
       </div>
 
-      <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-800 leading-[1.05] text-white">
-        Crack <span class="accent-line">CAT, GMAT</span><br/>
-        &amp; CUET.<br/>
-        <span class="text-brand-500">Or Get a</span><br/>
-        Full Refund.
+      <!-- Main headline -->
+<h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-800 leading-[1.05] text-white [font-variant-numeric:lining-nums]">
+        Top Rated <span class="text-brand-500">+4.9/5</span><br/>
+        Everywhere<br/></h1>
+<h1 class="font-display text-[35px] md:text-[42px] lg:text-[48px] font-800 leading-[1.05] text-white [font-variant-numeric:lining-nums]"><span class="text-brand-500">5-Levels Percentile</span><br/>
+        Based Batches
       </h1>
-
-      <p class="text-lg text-ink-200 max-w-xl leading-relaxed">
-        India's most trusted test-prep institute since 2016. World-class faculty, ability-based batches, and an unbreakable money-back guarantee.
-      </p>
 
       <!-- Guarantees row -->
       <div class="flex flex-wrap gap-3">
-        <span class="glass rounded-full px-4 py-2 text-sm font-medium text-white">🎯 CAT 96%ile or Refund</span>
-        <span class="glass rounded-full px-4 py-2 text-sm font-medium text-white">📊 GMAT 720+ or Refund</span>
-        <span class="glass rounded-full px-4 py-2 text-sm font-medium text-white">✅ CUET 96%ile or Refund</span>
+        <span class="glass rounded-full px-4 py-2 text-[17px] font-medium text-white">📊 CAT/GMAT 100%ilers as Faculty</span>
+        <span class="glass rounded-full px-4 py-2 text-[17px] font-medium text-white">✅ Ability Based Model - Lifetime Validity</span>
+        <span class="glass rounded-full px-4 py-2 text-[17px] font-medium text-white">🎯 +99%ile or Fee Refund Promise</span>
       </div>
+
+<p class="text-lg text-ink-200 max-w-xl leading-relaxed">
+        India's most trusted test-prep institute since 2016. World-class faculty, ability-based batches, and an unbreakable money-back guarantee.
+      </p>
 
       <!-- CTA buttons -->
       <div class="flex flex-wrap gap-4">
@@ -240,9 +242,8 @@
       </div>
     </div>
 
-    <!-- Right: Stats + Apex image -->
-    <div class="relative">
-      <!-- Apex image -->
+    <!-- Right: Stats + Apex image (unchanged) -->
+    <div class="relative -top-[45px]">
       <div class="relative rounded-3xl overflow-hidden border border-white/10">
         <img
           src="https://www.edushastra.com/wp-content/uploads/2026/01/Apex-final.webp"
@@ -257,8 +258,6 @@
           <p class="text-ink-200 text-sm mt-1">Elite · Merit-based · 25 students only</p>
         </div>
       </div>
-
-      <!-- Floating stats -->
       <div class="absolute -left-8 top-1/3 glass rounded-2xl p-4 hidden lg:block">
         <p class="font-display text-3xl font-800 text-brand-400 stat-num">10,000+</p>
         <p class="text-xs text-ink-200 mt-1">Students Placed</p>
@@ -268,15 +267,9 @@
         <p class="text-xs text-ink-200 mt-1">Money-Back Promise</p>
       </div>
     </div>
-  </div>
 
-  <!-- Scroll indicator -->
-  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-ink-400 text-xs">
-    <span>Scroll</span>
-    <div class="w-px h-10 bg-gradient-to-b from-ink-400 to-transparent"></div>
   </div>
 </section>
-
 
 <!-- ═══════════════════════════════════════════
      MARQUEE – IIM Placements
@@ -312,14 +305,13 @@
      STATS BAND
 ═══════════════════════════════════════════ -->
 <section class="py-20 px-6 bg-ink-800/30">
-  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:flex md:flex-wrap md:justify-center gap-8">
     {[
-      { num: "10,000+", label: "Students Mentored", sub: "Since 2016" },
-      { num: "100%",    label: "Money-Back Promise", sub: "No questions asked" },
-      { num: "99.99%",  label: "CAT Percentile", sub: "Faculty achievement" },
-      { num: "790",     label: "GMAT Score",    sub: "Faculty achievement" },
+      { num: "+62,000+", label: "Students Enrolled", sub: "Since 2016" },
+      { num: "+56,000",    label: "+90%ilers", sub: "Since 2016" },
+      { num: "+90%",  label: "Success Rate", sub: "Since 2016" },
     ].map(s => (
-      <div class="reveal text-center space-y-1">
+      <div class="reveal text-center space-y-1 min-w-[300px]">
         <p class="font-display text-4xl md:text-5xl font-800 text-brand-500 stat-num">{s.num}</p>
         <p class="font-semibold text-white text-sm">{s.label}</p>
         <p class="text-ink-400 text-xs">{s.sub}</p>
@@ -358,7 +350,7 @@
         <p class="text-ink-200 text-sm leading-relaxed mb-6">Comprehensive CAT prep with IIM-focused strategy, unlimited mock tests, and personalized performance analysis.</p>
         <ul class="space-y-2 text-sm text-ink-200 mb-8">
           <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> 160+ hours of live classes</li>
-          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> 21+ EliteCAT mock tests</li>
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> 21+ Elite CAT mock tests</li>
           <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> GK + Soft Skills prep</li>
           <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> Alumni mentoring</li>
         </ul>
@@ -410,6 +402,73 @@
         </a>
       </div>
     </div>
+<br>
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- GMCAT -->
+      <div class="reveal glass rounded-3xl p-8 group hover:border-brand-500/40 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-500 to-brand-400 rounded-t-3xl"></div>
+        <div class="w-12 h-12 rounded-2xl bg-brand-500/15 flex items-center justify-center mb-6">
+          <span class="text-2xl">🏛️</span>
+        </div>
+        <div class="flex items-start justify-between mb-3">
+          <h3 class="font-display text-2xl font-700 text-white">GMCAT 2026</h3>
+          <span class="text-xs bg-brand-500/20 text-brand-400 px-3 py-1 rounded-full font-semibold">96%ile Guarantee</span>
+        </div>
+        <p class="text-ink-200 text-sm leading-relaxed mb-6">Comprehensive CAT & GMAT prep with IIM and global top B-schools focused strategy, mock tests, and personalized performance analysis.</p>
+        <ul class="space-y-2 text-sm text-ink-200 mb-8">
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> 250+ hours of live classes</li>
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> 30+ Elite CAT+GMAT mock tests</li>
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> Profile Mapping with targeted Business Schools</li>
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> Free MBA admission consulting</li>
+        </ul>
+        <a href="https://www.edushastra.com/gmat-cat-coaching/" class="block text-center bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300 cta-glow">
+          Explore GMCAT Course →
+        </a>
+      </div>
+
+      <!-- SAT -->
+      <div class="reveal glass rounded-3xl p-8 group hover:border-brand-500/40 transition-all duration-300 hover:-translate-y-1 ">
+        <div class="w-12 h-12 rounded-2xl bg-brand-500/15 flex items-center justify-center mb-6">
+          <span class="text-2xl">📚</span>
+        </div>
+        <div class="flex items-start justify-between mb-3">
+          <h3 class="font-display text-2xl font-700 text-white">Digital SAT</h3>
+          <span class="text-xs bg-brand-500/20 text-brand-400 px-3 py-1 rounded-full font-semibold">1520 Guarantee</span>
+        </div>
+        <p class="text-ink-200 text-sm leading-relaxed mb-6">Target top US universities, Ivy League schools, and global undergrad programs. Free MBA admission consulting included.</p>
+        <ul class="space-y-2 text-sm text-ink-200 mb-8">
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> 160+ hours of live classes</li>
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> 10+ adaptive practice tests</li>
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> Free US college admission counseling</li>
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> Ability-based batch (IQ Mapping Test)</li>
+        </ul>
+        <a href="https://www.edushastra.com/sat-preparation/" class="block text-center border border-brand-500/50 hover:bg-brand-500 hover:border-brand-500 text-brand-400 hover:text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300">
+          Explore SAT Course →
+        </a>
+      </div>
+
+      <!-- XAT -->
+      <div class="reveal glass rounded-3xl p-8 group hover:border-brand-500/40 transition-all duration-300 hover:-translate-y-1 relative overflow-hidden">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-brand-500 to-brand-400 rounded-t-3xl"></div>
+        <div class="w-12 h-12 rounded-2xl bg-brand-500/15 flex items-center justify-center mb-6">
+          <span class="text-2xl">🌍</span>
+        </div>
+        <div class="flex items-start justify-between mb-3">
+          <h3 class="font-display text-2xl font-700 text-white">XAT 2027</h3>
+          <span class="text-xs bg-brand-500/20 text-brand-400 px-3 py-1 rounded-full font-semibold">96%ile Guarantee</span>
+        </div>
+        <p class="text-ink-200 text-sm leading-relaxed mb-6">Ace the XAT and unlock admissions to XLRI and top-tier management institutes through our expert-led hybrid coaching.</p>
+        <ul class="space-y-2 text-sm text-ink-200 mb-8">
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> 160+ hours of live classes</li>
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> Hybrid online + classroom</li>
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> 15+ Mock Tests</li>
+          <li class="flex items-center gap-2"><span class="text-brand-400">✓</span> Free admission counseling</li>
+        </ul>
+        <a href="https://www.edushastra.com/xat-preparation/" class="block text-center bg-brand-500 hover:bg-brand-600 text-white text-sm font-semibold px-6 py-3 rounded-full transition-all duration-300 cta-glow">
+          Explore XAT Course →
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -427,17 +486,17 @@
     <div class="glass rounded-3xl overflow-hidden border border-brand-500/20">
       <div class="grid lg:grid-cols-2">
         <!-- Image -->
-        <div class="relative min-h-80">
-          <img
-            src="https://www.edushastra.com/wp-content/uploads/2026/01/Apex-final.webp"
-            alt="Apex-25 Elite Batch EduShastra"
-            class="w-full h-full object-cover"
-            loading="lazy"
-          />
-          <div class="absolute inset-0 bg-gradient-to-r from-transparent to-ink-900/80 lg:to-ink-900 hidden lg:block"></div>
-          <div class="absolute inset-0 bg-gradient-to-t from-ink-900/80 to-transparent lg:hidden"></div>
+        <div class="relative min-h-80 isolate">
+           <div class="absolute inset-0 bg-gradient-to-r from-transparent to-ink-900/80 lg:to-ink-900 hidden lg:block"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-ink-900/80 to-transparent lg:hidden"></div>
+  
+             <img
+    src="https://www.edushastra.com/wp-content/uploads/2026/01/Apex-final.webp"
+    alt="Apex-25 Elite Batch EduShastra"
+    class="relative z-10 w-full h-full object-contain"
+    loading="lazy"
+               />
         </div>
-
         <!-- Content -->
         <div class="p-10 lg:p-14 flex flex-col justify-center space-y-6">
           <div>
@@ -512,7 +571,7 @@
               <div class="aspect-video bg-ink-800 relative">
                 <iframe
                   class="w-full h-full"
-                  src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID_1?rel=0&modestbranding=1"
+                  src="https://www.youtube.com/embed/iFB7LK6QsmQ?rel=0&modestbranding=1"
                   title="EduShastra Success Story 1"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -520,10 +579,6 @@
                   loading="lazy"
                 ></iframe>
               </div>
-              <div class="p-5">
-                <p class="font-display font-700 text-white">Student Name · CAT 99.5%ile</p>
-                <p class="text-ink-400 text-sm mt-1">IIM Ahmedabad · Batch 2024</p>
-              </div>
             </div>
           </div>
 
@@ -532,7 +587,7 @@
               <div class="aspect-video bg-ink-800">
                 <iframe
                   class="w-full h-full"
-                  src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID_2?rel=0&modestbranding=1"
+                  src="https://www.youtube.com/embed/7mI6dHD-OeM?rel=0&modestbranding=1"
                   title="EduShastra Success Story 2"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -540,10 +595,6 @@
                   loading="lazy"
                 ></iframe>
               </div>
-              <div class="p-5">
-                <p class="font-display font-700 text-white">Student Name · GMAT 760</p>
-                <p class="text-ink-400 text-sm mt-1">Wharton Business School · Batch 2024</p>
-              </div>
             </div>
           </div>
 
@@ -552,7 +603,7 @@
               <div class="aspect-video bg-ink-800">
                 <iframe
                   class="w-full h-full"
-                  src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID_3?rel=0&modestbranding=1"
+                  src="https://www.youtube.com/embed/epHftXoU3Rg?rel=0&modestbranding=1"
                   title="EduShastra Success Story 3"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -560,10 +611,6 @@
                   loading="lazy"
                 ></iframe>
               </div>
-              <div class="p-5">
-                <p class="font-display font-700 text-white">Student Name · CUET 99%ile</p>
-                <p class="text-ink-400 text-sm mt-1">Delhi University · Batch 2024</p>
-              </div>
             </div>
           </div>
 
@@ -572,7 +619,7 @@
               <div class="aspect-video bg-ink-800">
                 <iframe
                   class="w-full h-full"
-                  src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID_4?rel=0&modestbranding=1"
+                  src="https://www.youtube.com/embed/TRYDqI99-wY?rel=0&modestbranding=1"
                   title="EduShastra Success Story 4"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -580,10 +627,6 @@
                   loading="lazy"
                 ></iframe>
               </div>
-              <div class="p-5">
-                <p class="font-display font-700 text-white">Student Name · CAT 98.7%ile</p>
-                <p class="text-ink-400 text-sm mt-1">IIM Bangalore · Batch 2023</p>
-              </div>
             </div>
           </div>
 
@@ -592,17 +635,13 @@
               <div class="aspect-video bg-ink-800">
                 <iframe
                   class="w-full h-full"
-                  src="https://www.youtube.com/embed/REPLACE_WITH_VIDEO_ID_5?rel=0&modestbranding=1"
+                  src="https://www.youtube.com/eMDHy_QISwo?rel=0&modestbranding=1"
                   title="EduShastra Success Story 5"
                   frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                   loading="lazy"
                 ></iframe>
-              </div>
-              <div class="p-5">
-                <p class="font-display font-700 text-white">Student Name · GMAT 740</p>
-                <p class="text-ink-400 text-sm mt-1">INSEAD · Batch 2023</p>
               </div>
             </div>
           </div>
@@ -647,157 +686,143 @@
       </p>
     </div>
 
-    <!--
-      HOW TO ADD FACULTY PHOTOS:
-      1. Upload faculty images to your WordPress media library
-      2. Copy the image URL (same format as the Apex image above)
-      3. Replace the placeholder URLs below
-      4. Update name, belief quote, credentials
 
-      Image URLs follow this pattern from your site:
-      https://www.edushastra.com/wp-content/uploads/YEAR/MONTH/filename.webp
-    -->
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
       <!-- Faculty 1 -->
       <div class="reveal faculty-card glass rounded-3xl overflow-hidden group hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1">
         <div class="relative aspect-[3/4] bg-ink-800">
-          <!-- Replace src with actual faculty photo URL -->
-          <div class="w-full h-full bg-gradient-to-br from-ink-700 to-ink-800 flex items-center justify-center">
-            <span class="text-6xl opacity-20">👤</span>
-          </div>
-          <!-- Uncomment and use when you have the photo:
-          <img src="https://www.edushastra.com/wp-content/uploads/2025/09/Vipul-Parashar-EduShastra.webp"
-               alt="Faculty Name" class="w-full h-full object-cover object-top" loading="lazy" />
-          -->
+  
+          <img src="https://www.edushastra.com/wp-content/uploads/2023/08/M_L_Parashar.webp"
+               alt="Mr. M L Parashar" class="w-full h-full object-cover object-top" loading="lazy" />
+       
           <div class="faculty-overlay absolute inset-0 bg-brand-500/10 flex items-end p-4">
             <span class="text-xs text-brand-300 font-medium italic">"Everyone is a Genius"</span>
           </div>
         </div>
         <div class="p-5">
-          <p class="font-display font-700 text-white text-lg">Faculty Name</p>
-          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">CAT 100%iler · GMAT 790</p>
-          <p class="text-ink-400 text-xs leading-relaxed">Rtd. Director, Dept. of Science & Tech., Govt. of India · IIM-A, IIT-K Alumni</p>
+          <p class="font-display font-700 text-white text-lg">Mr. M L Parashar</p>
+          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">Rtd. Director, Dept. of Science & Tech., Govt. of India</p>
+          <p class="text-ink-400 text-xs leading-relaxed">Rtd. Deputy Secretary, Govt. of India, IIM-A, IIT-K</p>
         </div>
       </div>
 
       <!-- Faculty 2 -->
       <div class="reveal faculty-card glass rounded-3xl overflow-hidden group hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1">
         <div class="relative aspect-[3/4] bg-ink-800">
-          <div class="w-full h-full bg-gradient-to-br from-ink-700 to-ink-800 flex items-center justify-center">
-            <span class="text-6xl opacity-20">👤</span>
-          </div>
+          <img src="https://www.edushastra.com/wp-content/uploads/2025/09/Vipul-Parashar-EduShastra.webp"
+               alt="Mr. Vipul Parashar" class="w-full h-full object-cover object-top" loading="lazy" />
+
           <div class="faculty-overlay absolute inset-0 bg-brand-500/10 flex items-end p-4">
             <span class="text-xs text-brand-300 font-medium italic">"Affordable Quality Education"</span>
           </div>
         </div>
         <div class="p-5">
-          <p class="font-display font-700 text-white text-lg">Faculty Name</p>
-          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">IAS Officer · CAT 100%iler</p>
-          <p class="text-ink-400 text-xs leading-relaxed">Rtd. Indian Administrative Service Officer · IIT/IIM Alumnus · GMAT 790</p>
+          <p class="font-display font-700 text-white text-lg">Mr. Vipul Parashar</p>
+          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">12+ yrs Teaching Exp in Education Industry</p>
+          <p class="text-ink-400 text-xs leading-relaxed">DU, NIFT, INSEAD, Harvard Business School</p>
         </div>
       </div>
 
       <!-- Faculty 3 -->
       <div class="reveal faculty-card glass rounded-3xl overflow-hidden group hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1">
         <div class="relative aspect-[3/4] bg-ink-800">
-          <div class="w-full h-full bg-gradient-to-br from-ink-700 to-ink-800 flex items-center justify-center">
-            <span class="text-6xl opacity-20">👤</span>
-          </div>
+         <img src="https://www.edushastra.com/wp-content/uploads/2025/02/ayush1.webp"
+               alt="Mr. Ayush Matcha" class="w-full h-full object-cover object-top" loading="lazy" />
+
           <div class="faculty-overlay absolute inset-0 bg-brand-500/10 flex items-end p-4">
             <span class="text-xs text-brand-300 font-medium italic">"Education for All"</span>
           </div>
         </div>
         <div class="p-5">
-          <p class="font-display font-700 text-white text-lg">Faculty Name</p>
-          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">Ph.D. (DU) · CAT 99.99%iler</p>
-          <p class="text-ink-400 text-xs leading-relaxed">16+ yrs Leadership in IT & Retail · GMAT 780 Scorer</p>
+          <p class="font-display font-700 text-white text-lg">Mr. Ayush Matcha</p>
+          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">4+ yrs Teaching Exp in Education Industry</p>
+          <p class="text-ink-400 text-xs leading-relaxed">CAT'22 99.78%, CAT Topper, IIM 2023-25</p>
         </div>
       </div>
 
       <!-- Faculty 4 -->
       <div class="reveal faculty-card glass rounded-3xl overflow-hidden group hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1">
         <div class="relative aspect-[3/4] bg-ink-800">
-          <div class="w-full h-full bg-gradient-to-br from-ink-700 to-ink-800 flex items-center justify-center">
-            <span class="text-6xl opacity-20">👤</span>
-          </div>
+         <img src="https://www.edushastra.com/wp-content/uploads/2026/01/vibha-e1767786486545.webp"
+               alt="Ms. Vibha Malhotra" class="w-full h-full object-cover object-top" loading="lazy" />
+
           <div class="faculty-overlay absolute inset-0 bg-brand-500/10 flex items-end p-4">
             <span class="text-xs text-brand-300 font-medium italic">"Teaching is love"</span>
           </div>
         </div>
         <div class="p-5">
-          <p class="font-display font-700 text-white text-lg">Faculty Name</p>
-          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">IIM Alumnus · CAT 100%iler</p>
-          <p class="text-ink-400 text-xs leading-relaxed">15+ yrs Teaching · GMAT Verbal Score V51</p>
+          <p class="font-display font-700 text-white text-lg">Ms. Vibha Malhotra</p>
+          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">16+ yrs Teaching Exp in Education Industry</p>
+          <p class="text-ink-400 text-xs leading-relaxed">CAT QA 100 %iler, GMAT FE 745 Scorer</p>
         </div>
       </div>
 
       <!-- Faculty 5 -->
       <div class="reveal faculty-card glass rounded-3xl overflow-hidden group hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1">
         <div class="relative aspect-[3/4] bg-ink-800">
-          <div class="w-full h-full bg-gradient-to-br from-ink-700 to-ink-800 flex items-center justify-center">
-            <span class="text-6xl opacity-20">👤</span>
-          </div>
+        <img src="https://www.edushastra.com/wp-content/uploads/2024/12/teachers007.webp"
+               alt="Mr. Pawan Shahi" class="w-full h-full object-cover object-top" loading="lazy" />
+
           <div class="faculty-overlay absolute inset-0 bg-brand-500/10 flex items-end p-4">
             <span class="text-xs text-brand-300 font-medium italic">"Dream it. Wish it. Do it."</span>
           </div>
         </div>
         <div class="p-5">
-          <p class="font-display font-700 text-white text-lg">Ankur Agarwal</p>
-          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">GMAT/CAT Verbal Expert</p>
-          <p class="text-ink-400 text-xs leading-relaxed">16+ yrs Teaching · Former Deputy Director-LPU · Best Faculty Award 2013 & 2014</p>
+          <p class="font-display font-700 text-white text-lg">Mr. Pawan Shahi</p>
+          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">CAT 2024 99.92%iler, GMAT FE 765 Scorer</p>
+          <p class="text-ink-400 text-xs leading-relaxed">NIT Alumnus. CAT Topper.</p>
         </div>
       </div>
 
       <!-- Faculty 6 -->
       <div class="reveal faculty-card glass rounded-3xl overflow-hidden group hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1">
         <div class="relative aspect-[3/4] bg-ink-800">
-          <div class="w-full h-full bg-gradient-to-br from-ink-700 to-ink-800 flex items-center justify-center">
-            <span class="text-6xl opacity-20">👤</span>
-          </div>
+     <img src="https://www.edushastra.com/wp-content/uploads/2023/08/Deepak_Jain.webp"
+               alt="Mr. Deepak Jain" class="w-full h-full object-cover object-top" loading="lazy" />
+
           <div class="faculty-overlay absolute inset-0 bg-brand-500/10 flex items-end p-4">
             <span class="text-xs text-brand-300 font-medium italic">"Perseverance is key"</span>
           </div>
         </div>
         <div class="p-5">
-          <p class="font-display font-700 text-white text-lg">Faculty Name</p>
-          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">CAT'22 99.78%ile · IIM Alumni</p>
-          <p class="text-ink-400 text-xs leading-relaxed">4+ yrs Teaching · CAT Topper · IIM 2023-25 Batch</p>
+          <p class="font-display font-700 text-white text-lg">Mr. Deepak Jain</p>
+          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">Rtd. Indian Administrative Service Officer - UT</p>
+          <p class="text-ink-400 text-xs leading-relaxed">IIT/IIM Alumnus, CAT 100 %iler & GMAT 790 Scorer</p>
         </div>
       </div>
 
       <!-- Faculty 7 -->
       <div class="reveal faculty-card glass rounded-3xl overflow-hidden group hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1">
         <div class="relative aspect-[3/4] bg-ink-800">
-          <div class="w-full h-full bg-gradient-to-br from-ink-700 to-ink-800 flex items-center justify-center">
-            <span class="text-6xl opacity-20">👤</span>
-          </div>
+            <img src="https://www.edushastra.com/wp-content/uploads/2023/08/kushalbhardwaj.webp"
+               alt="Dr. Kushal Bhardwaj" class="w-full h-full object-cover object-top" loading="lazy" />
           <div class="faculty-overlay absolute inset-0 bg-brand-500/10 flex items-end p-4">
             <span class="text-xs text-brand-300 font-medium italic">"Nothing worth comes easy"</span>
           </div>
         </div>
         <div class="p-5">
-          <p class="font-display font-700 text-white text-lg">Faculty Name</p>
-          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">CAT QA 100%iler · GMAT FE 745</p>
-          <p class="text-ink-400 text-xs leading-relaxed">16+ yrs Teaching in Education Industry</p>
+          <p class="font-display font-700 text-white text-lg">Dr. Kushal Bhardwaj</p>
+          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">16+ yrs Exp at Leadership Level in IT & Retail</p>
+          <p class="text-ink-400 text-xs leading-relaxed">Ph.D. (DU), CAT 99.99 %iler & GMAT 780 Scorer</p>
         </div>
       </div>
 
       <!-- Faculty 8 -->
       <div class="reveal faculty-card glass rounded-3xl overflow-hidden group hover:border-brand-500/30 transition-all duration-300 hover:-translate-y-1">
         <div class="relative aspect-[3/4] bg-ink-800">
-          <div class="w-full h-full bg-gradient-to-br from-ink-700 to-ink-800 flex items-center justify-center">
-            <span class="text-6xl opacity-20">👤</span>
-          </div>
+        <img src="https://www.edushastra.com/wp-content/uploads/2023/08/ankur-agarwal.webp"
+               alt="Mr. Ankur Agarwal" class="w-full h-full object-cover object-top" loading="lazy" />
+
           <div class="faculty-overlay absolute inset-0 bg-brand-500/10 flex items-end p-4">
             <span class="text-xs text-brand-300 font-medium italic">"Everything is Possible"</span>
           </div>
         </div>
         <div class="p-5">
-          <p class="font-display font-700 text-white text-lg">Faculty Name</p>
-          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">Harvard · INSEAD Alumni</p>
-          <p class="text-ink-400 text-xs leading-relaxed">12+ yrs Teaching · DU, NIFT, INSEAD, Harvard Business School</p>
+          <p class="font-display font-700 text-white text-lg">Mr. Ankur Agarwal</p>
+          <p class="text-brand-400 text-xs font-semibold mt-0.5 mb-2">16+ yrs Teaching Exp in Education Industry</p>
+          <p class="text-ink-400 text-xs leading-relaxed">Former Deputy Director-LPU, Multiple Top Scores</p>
         </div>
       </div>
 
@@ -840,74 +865,6 @@
           <p class="text-ink-200 text-sm leading-relaxed">{f.text}</p>
         </div>
       ))}
-    </div>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
-     MONEY-BACK PROMISE BAND
-═══════════════════════════════════════════ -->
-<section class="py-16 px-6 relative overflow-hidden">
-  <div class="absolute inset-0 bg-brand-500/08 border-y border-brand-500/20"></div>
-  <div class="max-w-5xl mx-auto relative z-10 text-center">
-    <p class="text-brand-400 text-xs font-semibold tracking-widest uppercase mb-4">Our Guarantee</p>
-    <h2 class="font-display text-3xl md:text-4xl font-800 text-white mb-6">
-      If you don't hit your target, <span class="text-brand-500">you pay nothing.</span>
-    </h2>
-    <div class="flex flex-wrap justify-center gap-6 text-sm text-ink-200 mb-8">
-      <span class="flex items-center gap-2"><span class="text-brand-400 text-lg">✓</span> 6-series: 60+ Percentile</span>
-      <span class="flex items-center gap-2"><span class="text-brand-400 text-lg">✓</span> 7-series: 70+ Percentile</span>
-      <span class="flex items-center gap-2"><span class="text-brand-400 text-lg">✓</span> 8-series: 80+ Percentile</span>
-      <span class="flex items-center gap-2"><span class="text-brand-400 text-lg">✓</span> 9-series: 90+ Percentile</span>
-      <span class="flex items-center gap-2"><span class="text-brand-400 text-lg">✓</span> 10-series: 96+ Percentile</span>
-    </div>
-    <a href="#enroll" class="cta-glow bg-brand-500 hover:bg-brand-600 text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 inline-block text-base">
-      Claim Your Seat →
-    </a>
-  </div>
-</section>
-
-
-<!-- ═══════════════════════════════════════════
-     ENROLL / CTA
-═══════════════════════════════════════════ -->
-<section id="enroll" class="py-24 px-6">
-  <div class="max-w-3xl mx-auto text-center reveal">
-    <h2 class="font-display text-4xl md:text-5xl font-800 text-white mb-6">
-      Ready to crack your<br/><span class="text-brand-500">dream exam?</span>
-    </h2>
-    <p class="text-ink-200 mb-10 text-base leading-relaxed">
-      Pay the fee, share your details at <strong class="text-white">contact@edushastra.com</strong>, and take the Entrance Mapping Test. Your journey to IIM, ISB, or top B-school starts here.
-    </p>
-
-    <div class="glass rounded-3xl p-8 text-left space-y-5">
-      <h3 class="font-display text-xl font-700 text-white">Enrollment Process</h3>
-      <div class="space-y-4">
-        {[
-          { n:"01", t:"Pay Course Fee", d:"Choose your course and complete the fee payment online." },
-          { n:"02", t:"Share Details", d:"Email contact@edushastra.com with your Name, Email, Phone & Course." },
-          { n:"03", t:"Entrance Mapping Test", d:"Receive and complete our IQ-based test to get placed in the right ability group." },
-          { n:"04", t:"Classes Begin", d:"Start attending live online or offline classes with India's best faculty." },
-        ].map(s => (
-          <div class="flex items-start gap-4">
-            <span class="font-display text-brand-500 font-800 text-lg min-w-[2rem]">{s.n}</span>
-            <div>
-              <p class="font-semibold text-white text-sm">{s.t}</p>
-              <p class="text-ink-400 text-sm">{s.d}</p>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div class="flex flex-wrap gap-4 pt-4">
-        <a href="https://www.edushastra.com/contact-us/" class="cta-glow bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 flex-1 text-center">
-          Contact Us to Enroll
-        </a>
-        <a href="mailto:contact@edushastra.com" class="glass hover:bg-white/10 text-ink-200 hover:text-white font-semibold px-8 py-4 rounded-full transition-all duration-300 flex-1 text-center">
-          Email Us
-        </a>
-      </div>
     </div>
   </div>
 </section>
